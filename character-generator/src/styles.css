@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+body {
+  position: relative;
+  max-width: 105rem;
+  margin: 0 auto;
+  padding-top: 7.5rem;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
+header {
+  z-index: 100 !important;
+  width: 100%;
+  position: fixed;
+  height: 5.5rem;
+  left: 0;
+  top: 0;
+  /*box-shadow: 0 0 0.3rem 0.2rem rgba(0, 0, 0, 0.1);*/
+}
+
+.character-generator {
+  height: 60rem;
+  width: 100%;
+}
+
+.character-frame {
+  justify-content: space-between;
+  margin: 3.5rem 0 2.5rem 0;
+  flex: 1;
+}
+
+/* CHARACTER  */
+.character {
+  position: relative;
+  flex: 0 0 40%;
+  background: skyblue;
+}
+#body,
+#hair,
+#eye,
+#nose,
+#mouth,
+#accessories,
+#ear {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.character-customizer {
+  flex: 0 0 55%;
+}
+
+.character-customizer button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #184bae;
+  background: white;
+  margin: 0 1.5rem 1.5rem 0;
+}
+
+.customizer-buttons {
+  margin-top: 1.5rem;
+  max-width: 60%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.customizer-picker {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.customizer-picker > div {
+  cursor: pointer;
+  overflow: hidden;
+  gap: 2rem;
+  width: 15rem;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.customizer-picker > div:hover {
+  background: #ececec;
+}
+
+.customizer-picker div img {
+  height: 10%;
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+  object-fit: contain;
+}
+
+.customizer-picker div div {
+  height: 8rem;
+  width: 8rem;
+}
+
+.character-export {
+  width: 40%;
+  justify-content: space-between;
+}
+
+.character-export button {
+  width: 48%;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 0;
+}
+
+.character-export button:nth-child(1) {
+  background: #184bae;
+  color: white;
+}
+
+.character-export button:nth-child(2) {
+  background: white;
+  border: 0.2rem solid #888888;
+  color: #888888;
+}
+
+.active {
+  border: 2px solid #184bae;
+}
