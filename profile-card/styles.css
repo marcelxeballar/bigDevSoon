@@ -34,6 +34,7 @@ button {
 }
 
 img {
+  z-index: 100;
   object-fit: cover;
   object-position: bottom;
   height: 16rem;
@@ -66,14 +67,42 @@ body {
 
 .avatar {
   flex: 1;
-  background: red;
   width: 100%;
   height: 28rem;
   border-radius: 6.4rem 6.4rem 0 0;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
+/*
+  Curve
+*/
+
+.waves {
+  position: absolute;
+  top: 0;
+  border-radius: 6.4rem 6.4rem 0 0;
+  width: 100%;
+
+  overflow: hidden;
+  line-height: 0;
+}
+
+.waves div {
+  height: 13.5rem;
+  background: #d54285;
+}
+.waves svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(180deg);
+}
+
+.waves .shape-fill {
+  fill: #973150;
+}
 .profile-info {
   flex: 0 0 65%;
   padding: 4.8rem;
