@@ -2,6 +2,7 @@
 :root {
   --bg-yellow: #eff3bf;
   --btn-pink: #df3f8c;
+  --btn-dark-pink: #ad4766;
   --btn-grey: #838383;
 }
 
@@ -121,20 +122,34 @@ body {
   justify-content: space-between;
 }
 
+button:hover,
+.social-links i:hover {
+  cursor: pointer;
+}
+
 .buttons button:nth-child(1) {
   color: white;
   background: var(--btn-pink);
 }
 
+.buttons button:nth-child(1):hover {
+  background: var(--btn-dark-pink);
+}
+
 .buttons button:nth-child(2) {
-  color: var(--btn-grey);
   background: white;
+  color: var(--btn-grey);
   border: 1px solid var(--btn-grey);
 }
 
-svg {
-  height: 2.6rem;
-  width: 2.6rem;
+.buttons button:nth-child(2):hover {
+  color: black;
+  border: 2px solid black;
+}
+
+i {
+  font-size: 2.4rem;
+  color: black;
 }
 
 .social-links {
