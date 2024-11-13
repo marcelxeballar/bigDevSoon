@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700;800&display=swap");
+
+:root {
+  --white: #f3f3f3;
+  --orange: #f4bc04;
+  --light-orange: #ffc745;
+  --blue: #50c2f7;
+  --grey: #c4c4c4;
+  --dark-blue: #48b5f9;
+  --red: #e14c3d;
+  --dark-red: #b60000;
+}
+
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 100vw;
+  background: var(--white);
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 4rem;
+}
+p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+section {
+  height: 52rem;
+  width: 37rem;
+}
+
+img {
+  height: 10rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+/*
+Main 
+*/
+
+.new-game-btn {
+  margin: 0 auto;
+  width: 30rem;
+  background: var(--blue);
+  border-radius: 99rem;
+  padding: 0.75rem 0;
+}
+
+.new-game-btn:hover {
+  font-weight: 600;
+  background: var(--dark-blue);
+}
+
+/*
+Game
+*/
+
+.logo-score-container {
+  position: relative;
+  height: 4rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-score-container img {
+  height: 3.5rem;
+}
+
+.score-container {
+  position: absolute;
+  align-items: center;
+  right: 0;
+  background: white;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 0.75rem;
+  width: 14rem;
+  justify-content: center;
+}
+
+.score-container img {
+  margin-top: 0.5rem;
+  height: 2.75rem;
+}
+
+.score-container p {
+  font-weight: 600;
+}
+.game-container {
+  position: relative;
+  flex: 1;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.7rem;
+  margin-bottom: 2rem;
+  height: 36rem;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.25rem;
+  background: var(--grey);
+  height: 100%;
+  width: 100%;
+}
+
+.cell {
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.cell img {
+  object-fit: contain;
+  height: 10rem;
+  width: 10rem;
+}
+
+.result-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.result-display img {
+  height: 7.5rem;
+  margin-top: 1rem;
+}
+.result-display p {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.save-btn {
+  background: var(--orange);
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.65rem 0;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.reset-btn {
+  background: var(--grey);
+  padding: 0.5rem 0;
+  border-radius: 99rem;
+  color: #f3f3f3;
+}
+
+.save-btn:hover {
+  background: var(--light-orange);
+}
+
+.reset-btn {
+  background: var(--red);
+}
+
+.reset-btn:hover {
+  background: var(--dark-red);
+}
