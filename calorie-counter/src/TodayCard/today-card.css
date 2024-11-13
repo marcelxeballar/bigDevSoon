@@ -1,0 +1,97 @@
+.today-card {
+  width: 100%;
+  background: var(--dark-blue);
+  color: var(--black);
+}
+
+.today-title {
+  font-size: 4rem;
+}
+
+.today-card h2 {
+  font-size: 3.5rem;
+}
+
+.cal-consumption {
+  margin-top: 2rem;
+  min-height: 8rem;
+  position: relative;
+}
+
+.consumed,
+.remains {
+  position: absolute;
+}
+
+.consumed {
+  left: 0;
+}
+
+.consumed div {
+  align-items: center;
+}
+
+.remains {
+  right: 0;
+}
+
+.consumed-progress {
+  width: 100%;
+  height: 2rem;
+  margin: 3rem 0;
+  border-radius: 99rem;
+}
+
+.consumed-bar {
+  background: whitesmoke;
+  border-top-left-radius: 99rem;
+  border-bottom-left-radius: 99rem;
+}
+
+.remains-bar {
+  background: var(--grey);
+  border-top-right-radius: 99rem;
+  border-bottom-right-radius: 99rem;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .today-title {
+    font-size: 3.5rem;
+  }
+
+  .today-card h2 {
+    font-size: 3rem;
+  }
+
+  .cal-consumption {
+    margin-top: 1.5rem;
+  }
+
+  .consumed-progress {
+    width: 100%;
+    height: 1.75rem;
+    margin: 2rem 0rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .today-title {
+    font-size: 3rem;
+  }
+
+  .today-card h2 {
+    font-size: 2.5rem;
+  }
+
+  .cal-consumption {
+    margin-top: 1rem;
+  }
+
+  .consumed-progress {
+    width: 100%;
+    height: 1.5rem;
+    margin: 1.5rem 0rem;
+  }
+}

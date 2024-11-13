@@ -1,0 +1,84 @@
+.logs-result-wrapper {
+  width: 100%;
+  margin-top: 10rem;
+  max-width: 80rem;
+}
+
+.recent-logs-card {
+  border-radius: 1rem;
+  min-height: 15rem;
+  width: 100%;
+  background: var(--light-pink);
+  margin: 1rem 0;
+  align-items: center;
+  padding: 2rem;
+}
+
+.food-info-wrapper {
+  flex: 0 0 40%;
+}
+
+.food-info-wrapper p,
+.food-nutrients div p {
+  margin-top: 0.5rem;
+}
+.food-name {
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+.food-nutrients {
+  flex: 1;
+}
+
+.food-nutrients div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+svg.nutrients-icon {
+  font-size: 3rem !important;
+}
+
+.recent-logs-card:nth-of-type(2) {
+  background: var(--light-blue);
+}
+
+@media only screen and (max-width: 768px) {
+  .logs-result-wrapper {
+    margin-top: 9rem;
+  }
+  .food-info-wrapper {
+    flex: 0 0 40%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .logs-result-wrapper {
+    margin-top: 8rem;
+  }
+
+  .recent-logs-card {
+    flex-direction: column;
+  }
+
+  .food-info-wrapper,
+  .food-nutrients {
+    width: 100%;
+  }
+
+  .food-info-wrapper {
+    margin-bottom: 1.75rem;
+  }
+
+  .food-info-wrapper p,
+  .food-info-wrapper h2 {
+    display: inline;
+  }
+
+  .food-info-wrapper p {
+    margin-left: 0.5rem;
+  }
+}

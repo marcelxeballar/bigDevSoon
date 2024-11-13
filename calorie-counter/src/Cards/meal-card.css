@@ -1,0 +1,192 @@
+.meals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.meal-card {
+  position: relative;
+  width: 100%;
+  min-height: 25rem;
+  color: var(--black);
+}
+
+.meal-card:nth-of-type(2),
+.meal-card:nth-child(4) {
+  margin-right: 0;
+}
+
+.meal-info,
+.color-changer {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.meal-stats {
+  position: absolute;
+  right: 0;
+  top: 0rem;
+}
+
+.meal-info h2,
+.color-changer h2 {
+  flex: 0;
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+
+.add-meal-btn,
+.check-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  background: white;
+}
+
+.add-meal-btn,
+.check-btn,
+.remove-card-btn .add-food-btn {
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+
+.add-meal-btn span {
+  color: black;
+  font-size: 2rem;
+}
+
+.remove-card-btn {
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  background: #000f24;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 1.5rem;
+  color: white;
+}
+
+.color-container {
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.color-choice {
+  flex: 0 0 20%;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+.color {
+  margin-bottom: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.75rem;
+}
+
+.current-color {
+  border: 2px solid var(--black);
+}
+
+/*Animations*/
+/*Animations*/
+
+.pop-in {
+  animation: pop-in 0.3s ease-out forwards;
+}
+.wiggle {
+  animation: wiggle 0.3s infinite;
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.enter {
+  animation: enter 1s ease-in forwards;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-0.5deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .meals {
+    gap: 1.5rem;
+  }
+
+  .meal-info h2,
+  .color-changer h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .meals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .meal-card {
+    min-height: 20rem;
+    flex: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

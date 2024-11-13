@@ -1,0 +1,149 @@
+.results-wrapper {
+  flex-direction: column;
+}
+
+.food-result-wrapper {
+  background: red;
+  height: 50rem;
+  width: 100%;
+}
+
+.food-card {
+  background: var(--dark-whitesmoke);
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.food-card:hover {
+  cursor: pointer;
+}
+
+.title-wrapper {
+  flex: 1;
+}
+
+.food-title {
+  align-items: center;
+}
+.food-card h2 {
+  font-size: 1.75rem;
+  display: inline;
+}
+
+.food-card p {
+  margin-left: 0.5rem;
+  display: inline;
+}
+
+.log-food-btn {
+  border: 0;
+  background: transparent;
+}
+
+.log-food-btn span {
+  color: var(--black);
+}
+.nutrients.food-nutrients {
+  width: 90%;
+  flex: 0 0 90%;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.nutrients.food-nutrients div {
+  display: flex;
+}
+
+.nutrients.food-nutrients p {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.nutrient-name {
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.nutrient-value {
+  background: var(--dark-green);
+  border-radius: 99rem;
+  width: 9rem;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem !important;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.other-food-info-wrapper {
+  margin-bottom: 2rem;
+}
+
+.other-food-wrapper {
+  margin-top: 0 !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.other-food-wrapper div {
+  margin-bottom: 2rem;
+  flex: 0 0 25%;
+}
+.ingredients {
+  width: 100%;
+  margin-left: 0 !important;
+  text-align: justify;
+}
+.hidden {
+  display: none;
+}
+
+.ingredients-source-wrapper {
+  flex-direction: column;
+  width: 90%;
+  border-top: 2px solid var(--black);
+  padding-top: 3rem;
+}
+
+.ingredients {
+  text-align: justify;
+}
+
+.citation {
+  margin-top: 2rem;
+}
+
+.citation svg {
+  margin-right: 1rem;
+  width: 90rem;
+}
+
+.citation a {
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+  }
+
+  .nutrients.food-nutrients {
+    width: 100%;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .nutrients.food-nutrients div {
+    flex: 0 0 50%;
+    width: 100%;
+  }
+
+  .other-food-wrapper {
+    flex: 0 0 100%;
+  }
+}

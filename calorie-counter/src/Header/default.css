@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: "Poppins", serif;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+:root {
+  --dark-whitesmoke: #e8e8e8;
+  --black: #161b20;
+  --grey: #a3a3a3;
+  --red: #fd7259;
+
+  /*Meal Card  Colors
+  */
+
+  --dark-blue: #6ea5e4;
+  --light-blue: #89acd4;
+
+  --dark-purple: #7c8dc5;
+  --light-purple: #b5a4ee;
+
+  --dark-green: #519381;
+  --light-green: #7ed3bc;
+
+  --dark-orange: #fdb457;
+  --light-orange: #ffd398;
+
+  --dark-pink: #f498da;
+  --light-pink: #fed3e4;
+}
+html {
+  position: relative;
+  font-size: 62.5%;
+  background: whitesmoke;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+body {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5.5rem;
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  max-width: 82.5rem;
+  margin: 0 auto 2.5rem auto;
+}
+
+section:nth-of-type(1) {
+  margin-top: 10rem;
+}
+
+.card {
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  width: 100%;
+  z-index: 100;
+  align-items: center;
+  background: var(--dark-whitesmoke);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  position: absolute;
+  height: 2.25rem;
+  left: 2rem;
+}
+
+h1.logo {
+  top: 0.75rem;
+  font-size: 2.5rem;
+}
+
+.done-btn,
+.manual-log-btn-big,
+.manual-log-btn-medium {
+  position: absolute;
+  right: 2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 99rem;
+  border: 0;
+}
+
+.customize-btn {
+  margin: 0 auto;
+  padding: 0.75rem 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.done-btn,
+.customize-btn,
+.manual-log-btn-big,
+.manual-log-btn-medium {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: var(--black);
+  color: white;
+  border-radius: 99rem;
+  border: 0;
+}
+
+.searchbar-wrapper {
+  width: 100%;
+  max-width: 55rem;
+  padding-left: 1rem;
+  border: 0;
+  border-radius: 99rem;
+  background: white;
+  padding: 0.5rem 1rem;
+}
+
+.searchbar-wrapper input {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.searchfood-btn {
+  background: var(--black);
+  color: white;
+  border: 0;
+  margin-left: 1rem;
+  border-radius: 99rem;
+}
+
+.searchfood-btn span {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+}
+.customize-btn span {
+  margin-right: 0.5rem;
+  animation: wiggle 0.3s a;
+}
+
+.loader {
+  height: 12.5rem;
+  justify-self: center;
+}
+
+.no-result-wrapper {
+}
+
+.no-result-wrapper img {
+  height: 15rem;
+}
+
+.no-result-wrapper h2 {
+  font-size: 1.75rem;
+}
+
+button span {
+  color: whitesmoke;
+}
+.manual-log-btn-medium {
+  display: none;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+  .searchbar-wrapper {
+    max-width: 80rem;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .manual-log-btn-big {
+    display: none;
+  }
+
+  .manual-log-btn-medium {
+    display: block;
+    font-size: 1rem;
+    color: white;
+    background: var(--black);
+    font-size: 1.3rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  html {
+    /*background: white !important;*/
+  }
+  /*body {
+    background: yellow;
+  }*/
+  section {
+    margin: 0 auto 2rem auto;
+  }
+
+  .searchbar-wrapper {
+    max-width: 45rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .searchbar-wrapper {
+    max-width: 38rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  section:nth-of-type(1) {
+    margin: 8rem auto 1.5rem auto;
+  }
+
+  .searchbar-wrapper {
+    position: absolute;
+    right: 5rem;
+    left: 1rem;
+    width: auto;
+    max-width: 60rem;
+  }
+
+  .manual-log-btn-medium {
+    display: none;
+  }
+
+  .manual-log-btn-small {
+    position: absolute;
+    right: 1rem;
+    background: var(--black);
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 50%;
+    flex: 0 !important;
+  }
+}
